@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .cta {
+            margin: 20px 0;
+        }
+        .cta a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .products, .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product, .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+        .product img, .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product h3, .blog-post h3 {
+            margin-top: 0;
+        }
+        .product .price, .blog-post .excerpt {
+            color: #007bff;
+        }
+        .cart {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .contact-form, .faq, .privacy-policy {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .product, .blog-post {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About Us</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to My Online Store</h1>
+        <p>Your one-stop shop for amazing products</p>
+        <div class="cta">
+            <a href="#shop">Shop Now</a>
+        </div>
+    </section>
+    
+    <section id="shop" class="products">
+        <h2>Featured Products</h2>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p class="price">$19.99</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="cta">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p class="price">$29.99</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="cta">Add to Cart</a>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p class="price">$39.99</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+            <a href="#" class="cta">Add to Cart</a>
+        </div>
+    </section>
+    
+    <section id="about" class="contact-form">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best products and service. Our mission is to deliver quality and value.</p>
+    </section>
+    
+    <section id="blog" class="blog-posts">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-post">
+            <img src="blog1.jpg" alt="Blog Post 1">
+            <h3>Blog Post 1</h3>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="blog-post">
+            <img src="blog2.jpg" alt="Blog Post 2">
+            <h3>Blog Post 2</h3>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="blog-post">
+            <img src="blog3.jpg" alt="Blog Post 3">
+            <h3>Blog Post 3</h3>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            <a href="#">Read more</a>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <h3>What is your return policy?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3>How can I track my order?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    
+    <section class="privacy-policy">
+        <h2>Privacy Policy & Terms of Service</h2>
+        <p>Details about data privacy practices and terms of use.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 My Online Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
